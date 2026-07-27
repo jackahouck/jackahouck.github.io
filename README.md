@@ -1,7 +1,4 @@
 # Jack Houck — Personal Website
-
-A deliberately simple, old-school academic homepage built with one HTML file.
-
 ## Files
 
 - `index.html` — the entire website
