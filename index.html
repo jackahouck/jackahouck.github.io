@@ -3,7 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal academic website of Jackson Jack Houck, a mathematics and computer science student at Boston College.">
+
+  <meta
+    name="description"
+    content="Personal academic website of Jackson Jack Houck, a mathematics and computer science student at Boston College."
+  >
+
   <title>Jack Houck</title>
 
   <style>
@@ -16,7 +21,9 @@
       --visited: #551a8b;
     }
 
-    html { background: var(--page); }
+    html {
+      background: var(--page);
+    }
 
     body {
       max-width: 760px;
@@ -29,7 +36,31 @@
       line-height: 1.48;
     }
 
-    h1, h2 { font-weight: normal; }
+    header {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 1.25rem;
+    }
+
+    .profile-photo {
+      width: 135px;
+      height: 165px;
+      object-fit: cover;
+      border: 1px solid #777;
+      padding: 3px;
+      background: white;
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    h1,
+    h2 {
+      font-weight: normal;
+    }
 
     h1 {
       margin: 0;
@@ -44,21 +75,27 @@
       font-size: 1.28rem;
     }
 
-    p { margin: 0.65rem 0; }
+    p {
+      margin: 0.65rem 0;
+    }
 
     ul {
       margin: 0.4rem 0 0.8rem 1.15rem;
       padding: 0;
     }
 
-    li { margin: 0.45rem 0; }
+    li {
+      margin: 0.45rem 0;
+    }
 
     a {
       color: var(--link);
       text-decoration: underline;
     }
 
-    a:visited { color: var(--visited); }
+    a:visited {
+      color: var(--visited);
+    }
 
     .subtitle {
       margin-top: 0.15rem;
@@ -73,7 +110,9 @@
       content: " · ";
     }
 
-    .project-title { font-weight: bold; }
+    .project-title {
+      font-weight: bold;
+    }
 
     footer {
       margin-top: 2.5rem;
@@ -91,71 +130,124 @@
         font-size: 16px;
       }
 
-      h1 { font-size: 1.9rem; }
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
 
-      .contact span { display: block; }
+      .profile-photo {
+        width: 120px;
+        height: 145px;
+      }
 
-      .contact span:not(:last-child)::after { content: ""; }
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      .contact span {
+        display: block;
+      }
+
+      .contact span:not(:last-child)::after {
+        content: "";
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Jackson “Jack” Houck</h1>
-    <p class="subtitle">Mathematics and Computer Science, Boston College</p>
+    <img
+      class="profile-photo"
+      src="CroppedImage000000710_ForUpload.jpg"
+      alt="Photograph of Jack Houck"
+    >
 
-    <p class="contact">
-      <span><a href="mailto:houckja@bc.edu">houckja@bc.edu</a></span>
-      <span><a href="https://github.com/jackahouck">GitHub</a></span>
-      <span><a href="https://www.linkedin.com/in/jack-houck/">LinkedIn</a></span>
-    </p>
+    <div class="header-text">
+      <h1>Jackson “Jack” Houck</h1>
+
+      <p class="subtitle">
+        Mathematics and Computer Science, Boston College
+      </p>
+
+      <p class="contact">
+        <span>
+          <a href="mailto:houckja@bc.edu">houckja@bc.edu</a>
+        </span>
+
+        <span>
+          <a href="https://github.com/jackahouck">GitHub</a>
+        </span>
+
+        <span>
+          <a href="https://www.linkedin.com/in/jack-houck/">
+            LinkedIn
+          </a>
+        </span>
+      </p>
+    </div>
   </header>
 
   <main>
     <section>
       <h2>About</h2>
+
       <p>
-        I am an undergraduate at Boston College studying mathematics and computer
-        science. My interests include machine learning, natural language processing,
-        quantitative modeling, and the systems used to train and evaluate large models.
+        I am an undergraduate at Boston College studying mathematics and
+        computer science. My interests include machine learning, natural
+        language processing, quantitative modeling, and the systems used to
+        train and evaluate large models.
       </p>
+
       <p>
-        I am currently conducting NLP research through an NSF REU at the University
-        of Wisconsin–Milwaukee, where I work on incorporating linguistic structure into
-        causal language models.
+        I am currently conducting NLP research through an NSF REU at the
+        University of Wisconsin–Milwaukee, where I work on incorporating
+        linguistic structure into causal language models.
       </p>
     </section>
 
     <section>
       <h2>Selected Work</h2>
+
       <ul>
         <li>
-          <span class="project-title">Linguistic Metadata for Language Models.</span>
-          Extended a GPT-2 implementation with token-aligned structural metadata,
-          multi-task prediction, and a multi-GPU training pipeline.
+          <span class="project-title">
+            Linguistic Metadata for Language Models.
+          </span>
+
+          Extended a GPT-2 implementation with token-aligned structural
+          metadata, multi-task prediction, and a multi-GPU training pipeline.
         </li>
 
         <li>
           <span class="project-title">
-            <a href="https://github.com/samcraftt/hercell">HER2 Breast Cancer Image Classification</a>.
+            <a href="https://github.com/samcraftt/hercell">
+              HER2 Breast Cancer Image Classification
+            </a>.
           </span>
-          Developed a ConvNeXt-based pipeline and learned heatmap objective for
-          four-class HER2 scoring from immunohistochemistry images.
+
+          Developed a ConvNeXt-based pipeline and learned heatmap objective
+          for four-class HER2 scoring from immunohistochemistry images.
         </li>
 
         <li>
           <span class="project-title">
-            <a href="https://github.com/Cameron0629/ML-final-project-spring2026">Options Volatility Surface Modeling</a>.
+            <a href="https://github.com/Cameron0629/ML-final-project-spring2026">
+              Options Volatility Surface Modeling
+            </a>.
           </span>
-          Compared tree-based and neural regressors for implied-volatility prediction
-          using SPY and QQQ options data.
+
+          Compared tree-based and neural regressors for implied-volatility
+          prediction using SPY and QQQ options data.
         </li>
 
         <li>
           <span class="project-title">
-            <a href="https://github.com/b-johnsen/nlp-predicting-politics">Political Ideology Prediction</a>.
+            <a href="https://github.com/b-johnsen/nlp-predicting-politics">
+              Political Ideology Prediction
+            </a>.
           </span>
+
           Built text-classification and named-entity-masking experiments over
           executive orders and congressional bills.
         </li>
@@ -164,6 +256,7 @@
 
     <section>
       <h2>Research Interests</h2>
+
       <ul>
         <li>Natural language processing and language-model training</li>
         <li>Machine learning systems and efficient experimentation</li>
@@ -174,6 +267,7 @@
 
     <section>
       <h2>Miscellaneous</h2>
+
       <p>
         Outside of school, I am interested in homelabbing, science fiction,
         European history, Formula 1, and Boston College hockey.
